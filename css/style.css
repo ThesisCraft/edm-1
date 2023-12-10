@@ -16,6 +16,9 @@ a {
 header {
 	width: 100%;
 	border-bottom: none;
+	@media (max-width: 600px) {
+		height: 16px;
+	}	
 }
 header .inner {
 	width: 1180px;
