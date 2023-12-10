@@ -18,69 +18,61 @@ a {
 
 /* 헤더 스타일 */
 
-header {
-    width: 100%;
-    border-bottom: none;
-}
-
 header .inner {
-    width: 100%;
-    max-width: 1180px;
-    margin: 0 auto;
-    position: relative;
+	width: 1180px;
+	height: 50px;
+	margin: 0px auto;
+	position: relative; /* 자식 absolute 요소의 기준점 설정 */
+	@media (max-width: 768px) {
+		width: 90%;
+	}
+	@media (max-width: 600ox) {
+		width: 100%;
+	}
 }
-
-header .inner h1 {
-    position: absolute;
-    left: 0;
-    bottom: 15px;
+header .inner h1{
+	position: absolute;
+	left: 0px;
+	bottom: 15px;
+	/*top: 10px;*/
 }
-
 header .inner h1 a {
-    font: bold 24px/1 "arial";
-    color: #fff;
+	font: bold 24px/1 "arial"; /* 폰트 축약형 */
+	color: #fff;
 }
-
 header .inner .util {
-    position: absolute;
-    top: 20px;
-    right: 30px;
+	position: absolute;
+	top: 20px;
+	right: 30px;
 }
-
 header .inner .util li {
-    float: left;
+	float: left;
 }
-
 header .inner .util li a {
-    display: block;
-    font: 12px/1 "arial";
-    color: #999;
-    padding: 0 10px;
+	display: block;
+	font: 12px/1 "arial";
+	color: #999;
+	padding: 0px 10px;
 }
-
 header .inner #gnb {
-    position: absolute;
-    bottom: 0;
-    right: 0;
+	position: absolute;
+	bottom: 0px;
+	right: 0px;
 }
-
 header .inner #gnb li {
-    float: left;
+	float: left;
 }
-
 header .inner #gnb li a {
-    display: block;
-    font: bold 15px/1 "arial";
-    color: #fff;
-    padding: 20px 40px;
-    transition: all 0.5s;
+	display: block; /* 인라인 요소는 block을 설정하여 크기 조절 가능 */
+	font: bold 15px/1 "arial";
+	color: #fff;
+	padding: 20px 40px;
+	transition: all 0.5s;
 }
-
 header .inner #gnb li a:hover {
-    background: none;
-    color: #fff;
+	background: none;
+	color: #fff;
 }
-
 /* 비주얼 스타일 */
 
 figure {
