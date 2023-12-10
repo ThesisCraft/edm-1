@@ -1,84 +1,88 @@
 @charset 'utf-8';
+
+/* 기본 스타일 */
+
 * {
-	margin: 0px;
-	padding: 0px;
-	box-sizing: border-box;
-}
-ul,
-ol {
-	list-style: none;
-}
-a {
-	text-decoration: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-/* header */
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 헤더 스타일 */
+
 header {
-	width: 100%;
-	border-bottom: none;
-	@media (max-width: 600px) {
-		width: 90%;
-	}
-	@media (max-width: 600px) {
-		width: 90%;
-	}
+    width: 100%;
+    border-bottom: none;
 }
+
 header .inner {
-	width: 1180px;
-	height: 50px;
-	margin: 0px auto;
-	position: relative; /* 자식 absolute 요소의 기준점 설정 */
-	@media (max-width: 768px) {
-		width: 90%;
-	}
-	@media (max-width: 600ox) {
-		width: 100%;
-	}
+    width: 100%;
+    max-width: 1180px;
+    margin: 0 auto;
+    position: relative;
 }
-header .inner h1{
-	position: absolute;
-	left: 0px;
-	bottom: 15px;
-	/*top: 10px;*/
+
+header .inner h1 {
+    position: absolute;
+    left: 0;
+    bottom: 15px;
 }
+
 header .inner h1 a {
-	font: bold 24px/1 "arial"; /* 폰트 축약형 */
-	color: #fff;
+    font: bold 24px/1 "arial";
+    color: #fff;
 }
+
 header .inner .util {
-	position: absolute;
-	top: 20px;
-	right: 30px;
+    position: absolute;
+    top: 20px;
+    right: 30px;
 }
+
 header .inner .util li {
-	float: left;
+    float: left;
 }
+
 header .inner .util li a {
-	display: block;
-	font: 12px/1 "arial";
-	color: #999;
-	padding: 0px 10px;
+    display: block;
+    font: 12px/1 "arial";
+    color: #999;
+    padding: 0 10px;
 }
+
 header .inner #gnb {
-	position: absolute;
-	bottom: 0px;
-	right: 0px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
+
 header .inner #gnb li {
-	float: left;
+    float: left;
 }
+
 header .inner #gnb li a {
-	display: block; /* 인라인 요소는 block을 설정하여 크기 조절 가능 */
-	font: bold 15px/1 "arial";
-	color: #fff;
-	padding: 20px 40px;
-	transition: all 0.5s;
+    display: block;
+    font: bold 15px/1 "arial";
+    color: #fff;
+    padding: 20px 40px;
+    transition: all 0.5s;
 }
+
 header .inner #gnb li a:hover {
-	background: none;
-	color: #fff;
+    background: none;
+    color: #fff;
 }
-/* visual */
+
+/* 비주얼 스타일 */
+
 figure {
     width: 100%;
     height: calc(100vh - 120px);
@@ -135,7 +139,8 @@ figure .inner a:hover {
     color: #555;
 }
 
-/* news */
+/* 뉴스 스타일 */
+
 section {
     width: 100%;
     padding: 200px 0;
@@ -199,7 +204,8 @@ section .inner .wrap article .pic img {
     height: 100%;
 }
 
-/* main */
+/* 메인 스타일 */
+
 main {
     width: 100%;
     padding: 100px 0;
@@ -262,7 +268,8 @@ main article:hover {
     background: #eee;
 }
 
-/* footer */
+/* 푸터 스타일 */
+
 footer {
     width: 100%;
     background: #333;
@@ -291,4 +298,88 @@ footer .inner .upper h1 {
     float: right;
     font: bold 18px/1 "arial";
     color: #666;
+}
+
+/* 모바일 화면 스타일 */
+
+@media only screen and (max-width: 600px) {
+    header .inner {
+        width: 90%;
+    }
+
+    header .inner h1 {
+        bottom: 10px;
+    }
+
+    header .inner .util {
+        top: 15px;
+        right: 20px;
+    }
+
+    header .inner #gnb {
+        bottom: 10px;
+        right: 10px;
+    }
+
+    figure .inner h1 {
+        font-size: 50px;
+        margin-bottom: 10px;
+    }
+
+    figure .inner p {
+        font-size: 14px;
+        margin-bottom: 100px;
+    }
+
+    figure .inner a {
+        width: 300px;
+        height: 25px;
+        font-size: 10px;
+    }
+
+    section .inner h1 {
+        font-size: 20px;
+        margin-bottom: 30px;
+    }
+
+    section .inner .wrap article h2 {
+        font-size: 14px;
+    }
+
+    section .inner .wrap article p {
+        font-size: 12px;
+    }
+
+    section .inner .wrap article .pic {
+        height: 160px;
+        margin-bottom: 10px;
+    }
+
+    main h1 {
+        font-size: 24px;
+        margin-top: 100px;
+        margin-bottom: 20px;
+    }
+
+    main article {
+        width: 100%;
+    }
+
+    main article .pic {
+        height: 200px;
+    }
+
+    main article h2 {
+        font-size: 16px;
+        margin-top: 5px;
+    }
+
+    main article a {
+        font-size: 12px;
+    }
+
+    footer .inner .upper h1 {
+        font-size: 14px;
+        margin-top: 5px;
+    }
 }
