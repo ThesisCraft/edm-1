@@ -12,13 +12,40 @@ a {
 	text-decoration: none;
 }
 
+@media (max-width: 900px) {
+	/* header */
+	header .inner {
+	  width: 90%;
+	}
+	
+	header .inner .util,
+	header .inner #gnb {
+	  display: none;
+	}
+	
+	/* visual */
+	figure .inner h1 {
+	  font-size: 90px;
+	}
+	
+	/* news */
+	section .inner .wrap article {
+	  width: 50%;
+	  margin: 0 10px;
+	}
+	
+	/* main */
+	main article {
+	  width: 100%;
+	}
+  }
 /* header */
 header {
 	width: 100%;
 	border-bottom: none;
 	@media (max-width: 600px) {
 		height: 16px;
-	}	
+	}
 }
 header .inner {
 	width: 1180px;
